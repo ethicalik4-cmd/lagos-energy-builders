@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Keep public pages in file-based routes and shared navigation, footer, and scroll-reveal behavior in `src/components`; this keeps the four company pages consistent.
+- Store public inquiry submissions through a Zod-validated server function into a service-role-only table; browser visitors must not be able to read or alter submitted inquiries.
